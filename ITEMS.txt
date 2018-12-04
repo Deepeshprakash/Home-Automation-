@@ -1,0 +1,31 @@
+#ITEMS LIST MASTER BED ROOM
+Switch MBL {mqtt=">[mosquitto:myhouse/MBL/light:command:ON:1],>[mosquitto:myhouse/MBL/light:command:OFF:0]"}
+Switch MBAC {mqtt=">[mosquitto:myhouse/MBAC/light:command:ON:1],>[mosquitto:myhouse/MBAC/light:command:OFF:0]"}
+Switch MBTV {mqtt=">[mosquitto:myhouse/MBTV/light:command:ON:1],>[mosquitto:myhouse/MBTV/light:command:OFF:0]"}
+Switch MBTL {mqtt=">[mosquitto:myhouse/MBTL/light:command:ON:1],>[mosquitto:myhouse/MBTL/light:command:OFF:0]"}
+
+
+
+#ITEMS LIST FOR HALL
+Switch HTV {mqtt=">[mosquitto:myhouse/HTV/light:command:ON:1],>[mosquitto:myhouse/HTV/light:command:OFF:0]"}
+Switch HAC {mqtt=">[mosquitto:myhouse/HAC/light:command:ON:1],>[mosquitto:myhouse/HAC/light:command:OFF:0]"}
+Switch HTL {mqtt=">[mosquitto:myhouse/HTL/light:command:ON:1],>[mosquitto:myhouse/HTL/light:command:OFF:0]"}
+Switch HL {mqtt=">[mosquitto:myhouse/HL/light:command:ON:1],>[mosquitto:myhouse/HL/light:command:OFF:0]"}
+Switch HG {mqtt=">[mosquitto:myhouse/HG/light:command:ON:1],>[mosquitto:myhouse/HG/light:command:OFF:0]"}
+
+#ITEMS LIST FOR KITCHEN
+Switch KL {mqtt=">[mosquitto:myhouse/KL/light:command:ON:1],>[mosquitto:myhouse/KL/light:command:OFF:0]"}
+Switch KT {mqtt=">[mosquitto:myhouse/KT/light:command:ON:1],>[mosquitto:myhouse/KT/light:command:OFF:0]"}
+Switch KG {mqtt=">[mosquitto:myhouse/KG/light:command:ON:1],>[mosquitto:myhouse/KG/light:command:OFF:0]"}
+Dimmer KTEMP "Light intensity [%d %%]" (gBedroom) {mqtt="<[mosquitto:temp/intensity/value:state:default], >[mosquitto:temp/intensity:command:*:default]"}
+Dimmer KHUM "Light intensity [%d %%]" (gBedroom) {mqtt="<[mosquitto:hum/intensity/value:state:default], >[mosquitto:hum/intensity:command:*:default]"}
+Dimmer CO2 "Light intensity [%d %%]" (gBedroom) {mqtt="<[mosquitto:co2/intensity/value:state:default], >[mosquitto:co2/intensity:command:*:default]"}
+
+
+
+#ITEMS LIST FOR BATHROOM
+Switch BL {mqtt=">[mosquitto:myhouse/BL/light:command:ON:1],>[mosquitto:myhouse/BL/light:command:OFF:0]"}
+Switch BWM {mqtt=">[mosquitto:myhouse/BWM/light:command:ON:1],>[mosquitto:myhouse/BWM/light:command:OFF:0]"}
+Switch BTUB {mqtt=">[mosquitto:myhouse/BTUB/light:command:ON:1],>[mosquitto:myhouse/BTUB/light:command:OFF:0]"}
+
+Dimmer  "KTemp [%d %%]" (gBedroom) {mqtt="<[mosquitto:myhome/intensity/value:state:default]"}
